@@ -7,8 +7,8 @@
     "fr": "Widget phase de la lune : illumination, lever et coucher, prochains événements lunaires.",
     "de": "Mondphasen-Widget: Beleuchtung, Mondauf- und -untergang, nächste Mondereignisse."
   },
-  "version": "0.1.0",
-  "docker_image": "ghcr.io/william-de71/gladys-moon-phase:0.1.0",
+  "version": "1.0.0",
+  "docker_image": "ghcr.io/william-de71/gladys-moon-phase:1.0.0",
   "gladys_version": ">=5.1.1",
   "categories": ["environment"],
   "cover_image": "https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/cover.jpg",
