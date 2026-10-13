@@ -15,6 +15,10 @@ test('is a provider reading the house locations, in lockstep with package.json',
   assert.ok(manifest.docker_image.endsWith(`:${pkg.version}`));
 });
 
+test('is listed under Local: everything is computed in the container, no network', () => {
+  assert.deepEqual(manifest.transports, ['local']);
+});
+
 test('declares exactly the widget the code handles, with the settings it reads', () => {
   assert.deepEqual(
     manifest.widgets.map((widget) => widget.key),
