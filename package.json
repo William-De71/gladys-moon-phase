@@ -1,6 +1,6 @@
 {
   "name": "gladys-moon-phase",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "External Gladys Assistant integration adding a moon phase dashboard widget: phase, illumination, moonrise and moonset, upcoming lunar events.",
   "homepage": "https://github.com/William-De71/gladys-moon-phase",
