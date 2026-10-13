@@ -1,0 +1,12 @@
+Gladys Moon phase integration
+Copyright 2026 William Deren
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The moon photo (assets/moon.png) is a crop of the "Moon Phase and Libration,
+2025" visualization by NASA's Scientific Visualization Studio (visualizer:
+Ernie Wright, USRA), in the public domain: https://svs.gsfc.nasa.gov/5415
+
+The computation of the widget is a port of the moon phase widget proposed to
+the Gladys Assistant core (pull request #2990). The instants of the lunar
+events follow the algorithms of J. Meeus, Astronomical Algorithms (2nd ed.).

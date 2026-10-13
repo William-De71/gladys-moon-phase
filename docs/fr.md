@@ -2,7 +2,8 @@
 
 Cette intégration ajoute à Gladys un widget de tableau de bord **« Phase de la lune »** : la phase du jour,
 l'illumination et l'âge de la lune, son disque éclairé, son lever et son coucher, et les prochains événements
-lunaires.
+lunaires. Les scènes peuvent réagir aux événements lunaires (pleine lune, nouvelle lune, éclipse…) et lire la
+phase de la lune.
 
 ## Prêt à l'emploi
 
@@ -35,6 +36,45 @@ La maison doit être **localisée** : renseignez sa position dans **Paramètres 
 
 Le widget est mis à jour toutes les 10 minutes et juste après minuit.
 
+## Scènes
+
+### Déclencheur « Lune : événement lunaire »
+
+Déclenché à la minute de l'événement, à l'heure de Gladys :
+
+| Événement            | Quand                                              |
+| -------------------- | -------------------------------------------------- |
+| **Nouvelle lune**    | la lune passe entre la Terre et le soleil          |
+| **Premier quartier** | la moitié du disque est éclairée, la lune croît    |
+| **Pleine lune**      | tout le disque est éclairé                         |
+| **Dernier quartier** | la moitié du disque est éclairée, la lune décroît  |
+| **Périgée**          | la lune est au plus près de la Terre               |
+| **Apogée**           | la lune est au plus loin de la Terre               |
+| **Éclipse de lune**  | une pleine lune qui passe dans l'ombre de la Terre |
+
+Choisissez les événements auxquels réagir (vide : tous). La scène reçoit l'événement, son nom, sa date et son
+heure, l'illumination, la distance Terre-Lune et une phrase **Résumé** prête à envoyer : « Pleine lune à 05:11 : la
+lune est éclairée à 100 %, à 368 600 km de la Terre. »
+
+Un événement n'est déclenché qu'une fois, même après un redémarrage. Si l'intégration était arrêtée à cette minute,
+l'événement n'est pas déclenché plus tard (une scène « pleine lune » une heure après surprendrait plus qu'elle
+n'aiderait).
+
+Idées : passer l'éclairage du jardin en ambiance « pleine lune », recevoir un message le soir d'une éclipse de
+lune, un rappel pour semer à la nouvelle lune.
+
+### Action « Lune : phase de la lune »
+
+Donne la lune d'une maison maintenant (vide : la première maison localisée) : phase, pourcentage éclairé, âge,
+croissante ou non, lever et coucher, la date de la prochaine pleine lune et de la prochaine nouvelle lune avec le
+nombre de jours, et un résumé, par exemple pour répondre à « quelle lune ce soir ? » dans un message.
+
+### Langue des textes de scène
+
+Gladys ne donne la langue qu'aux widgets. Les noms d'événements et les résumés des scènes suivent le réglage
+**Langue des textes de scène** de l'intégration : anglais, français, allemand, espagnol, ou automatique (la langue
+de votre tableau de bord, dès que le widget a été affiché).
+
 ## Questions fréquentes
 
 **Le widget dit qu'aucune maison n'est localisée.** Renseignez la position d'une maison dans Paramètres → Maisons.
@@ -45,4 +85,7 @@ message liste les noms à utiliser.
 **Les heures sont décalées.** Vérifiez le fuseau horaire de Gladys (Paramètres → Système) ; l'intégration prend
 celui-ci. Redémarrez l'intégration après l'avoir changé.
 
-**Ma langue n'est pas l'anglais, le français ou l'allemand.** Le widget s'affiche alors en anglais.
+**Ma langue n'est pas l'anglais, le français, l'allemand ou l'espagnol.** Le widget s'affiche alors en anglais.
+
+**Les textes de scène sont en anglais.** Réglez **Langue des textes de scène** dans les réglages, ou affichez une fois
+le widget.
