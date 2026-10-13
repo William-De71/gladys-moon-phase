@@ -1,0 +1,46 @@
+{
+  "manifest": {
+    "type": "provider",
+    "config_schema": [
+      {
+        "key": "intro",
+        "type": "section"
+      }
+    ],
+    "actions": [],
+    "scene_triggers": [],
+    "scene_actions": [],
+    "widgets": [
+      {
+        "key": "moon",
+        "settings": [
+          {
+            "key": "house",
+            "type": "string"
+          },
+          {
+            "key": "display_details",
+            "type": "boolean"
+          },
+          {
+            "key": "compute_at_midnight",
+            "type": "boolean"
+          }
+        ],
+        "options": {}
+      }
+    ]
+  },
+  "image_keys": {
+    "examples": {
+      "moon-v1-wax-59": {
+        "illumination": 59,
+        "waxing": true
+      },
+      "moon-v1-wan-12": {
+        "illumination": 12,
+        "waxing": false
+      }
+    }
+  }
+}
