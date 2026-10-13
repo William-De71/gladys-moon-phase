@@ -23,6 +23,8 @@ Edit a dashboard, pick **Moon phase** among the integration widgets, then set:
 
 ## What the widget shows
 
+![The "Moon phase" widget: a waxing gibbous moon 79 % illuminated, moonrise and moonset, then the distance, trajectory, constellation and the upcoming lunar events — generated illustration, not a screenshot](https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/docs/assets/widgets.en.png)
+
 - **The phase** (New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon…), the **illuminated
   percentage** and the **age** of the moon (days since the last new moon).
 - **The moon disk** (a NASA photo) with its lit part.

@@ -18,6 +18,8 @@ Mondereignisses** und eine **Aktion, die die Mondphase liefert**. Gebaut auf `@g
 **Keine Konfiguration, vollständig lokal**: Alles wird aus dem Standort des Zuhauses berechnet, ohne Konto, ohne
 Schlüssel und ohne Internetzugang.
 
+![Das Widget „Mondphase“: ein zunehmender Dreiviertelmond, zu 79 % beleuchtet, Mondauf- und -untergang, dann Entfernung, Bahn, Sternbild und die nächsten Mondereignisse — generierte Illustration, kein Screenshot](docs/assets/widgets.de.png)
+
 Benutzerdokumentation: [English](docs/en.md) · [Français](docs/fr.md) · [Deutsch](docs/de.md) ·
 [Español](docs/es.md).
 
@@ -227,6 +229,8 @@ greifen nie auf das Netz zu. Über die Unit-Tests hinaus:
   jeder;
 - `test/events.test.js` prüft die Zeitpunkte der Mondereignisse gegen PyEphem;
 - `test/release.test.js` deckt das Release-Skript ab (Version, Changelog, Versionssprung).
+- `docs/illustrations/render.sh` erzeugt die Widget-Illustrationen in `docs/assets` aus dem Widget-Code neu
+  (Headless-Chrome, Styles des Gladys-Frontends): nach jeder Änderung am Widget erneut ausführen.
 
 `gladys_version` ist `>=5.1.1` (Widgets, Szenen-Auslöser und -Aktionen externer Integrationen). Nur für die
 Entwicklung verschiebt `MOON_DATA_DIR` die Dateien von `/data`.

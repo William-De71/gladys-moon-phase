@@ -23,6 +23,8 @@ Edita un panel, elige **Fase lunar** entre los widgets de integración y despué
 
 ## Lo que muestra el widget
 
+![El widget «Fase lunar»: una luna gibosa creciente iluminada al 79 %, la salida y la puesta, y luego la distancia, la trayectoria, la constelación y los próximos eventos lunares — ilustración generada, no una captura de pantalla](https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/docs/assets/widgets.es.png)
+
 - **La fase** (Luna Nueva, Luna Creciente, Cuarto Creciente, Gibosa Creciente, Luna Llena…), el **porcentaje
   iluminado** y la **edad** de la luna (días desde la última luna nueva).
 - **El disco lunar** (una foto de la NASA) con su parte iluminada.

@@ -24,6 +24,8 @@ La maison doit être **localisée** : renseignez sa position dans **Paramètres 
 
 ## Ce que montre le widget
 
+![Le widget « Phase de la lune » : une gibbeuse croissante éclairée à 79 %, le lever et le coucher, puis la distance, la trajectoire, la constellation et les prochains événements lunaires — illustration générée, pas une capture d’écran](https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/docs/assets/widgets.fr.png)
+
 - **La phase** (Nouvelle Lune, Premier Croissant, Premier Quartier, Gibbeuse Croissante, Pleine Lune…), le
   **pourcentage éclairé** et l'**âge** de la lune (jours écoulés depuis la dernière nouvelle lune).
 - **Le disque lunaire** (photo de la NASA) avec sa partie éclairée.

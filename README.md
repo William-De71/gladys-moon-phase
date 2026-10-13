@@ -17,6 +17,8 @@ the phase of the moon**. Built on `@gladysassistant/integration-sdk` 0.15.
 **Zero configuration, fully local**: everything is computed from the location of the house, with no account, no
 key and no internet access.
 
+![The "Moon phase" widget: a waxing gibbous moon 79 % illuminated, moonrise and moonset, then the distance, trajectory, constellation and the upcoming lunar events — generated illustration, not a screenshot](docs/assets/widgets.en.png)
+
 User documentation: [English](docs/en.md) · [Français](docs/fr.md) · [Deutsch](docs/de.md) · [Español](docs/es.md).
 
 ## Contents
@@ -217,6 +219,8 @@ touch the network. Beyond the unit tests:
   each;
 - `test/events.test.js` checks the instants of the lunar events against PyEphem;
 - `test/release.test.js` covers the release script (version, changelog, bump).
+- `docs/illustrations/render.sh` regenerates the widget illustrations of `docs/assets` from the widget code
+  (headless Chrome, the Gladys front styles): run it after any change to the widget.
 
 `gladys_version` is `>=5.1.1` (widgets, scene triggers and actions of external integrations). For development only,
 `MOON_DATA_DIR` moves the files of `/data`.

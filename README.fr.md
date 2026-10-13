@@ -18,6 +18,8 @@ minute de chaque événement lunaire** et d’une **action donnant la phase de l
 **Zéro configuration, entièrement local** : tout est calculé à partir de la position de la maison, sans compte, sans
 clé et sans accès Internet.
 
+![Le widget « Phase de la lune » : une gibbeuse croissante éclairée à 79 %, le lever et le coucher, puis la distance, la trajectoire, la constellation et les prochains événements lunaires — illustration générée, pas une capture d’écran](docs/assets/widgets.fr.png)
+
 Documentation utilisateur : [English](docs/en.md) · [Français](docs/fr.md) · [Deutsch](docs/de.md) ·
 [Español](docs/es.md).
 
@@ -226,6 +228,8 @@ n’accèdent jamais au réseau. En plus des tests unitaires :
   widget dans chacune ;
 - `test/events.test.js` vérifie les instants des événements lunaires contre PyEphem ;
 - `test/release.test.js` couvre le script de release (version, changelog, montée de version).
+- `docs/illustrations/render.sh` régénère les illustrations du widget de `docs/assets` à partir du code du widget
+  (Chrome headless, styles du front Gladys) : relancez-le après tout changement du widget.
 
 `gladys_version` vaut `>=5.1.1` (widgets, déclencheurs et actions de scène des intégrations externes). Pour le
 développement uniquement, `MOON_DATA_DIR` déplace les fichiers de `/data`.

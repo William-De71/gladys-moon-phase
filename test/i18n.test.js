@@ -119,3 +119,18 @@ test('README: one per language, each linking to the three others and showing the
     assert.ok(text.includes('](cover.jpg)'), `${file}: cover`);
   }
 });
+
+test('README and docs show the generated widget illustration of their language', () => {
+  const files = { en: 'README.md', fr: 'README.fr.md', de: 'README.de.md', es: 'README.es.md' };
+  for (const language of LANGUAGES) {
+    const image = `docs/assets/widgets.${language}.png`;
+    assert.ok(existsSync(new URL(`../${image}`, import.meta.url)), `${image} is missing`);
+    assert.ok(read(`../${files[language]}`).includes(`](${image})`), files[language]);
+    assert.ok(
+      read(`../docs/${language}.md`).includes(
+        `](https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/${image})`,
+      ),
+      `docs/${language}.md`,
+    );
+  }
+});

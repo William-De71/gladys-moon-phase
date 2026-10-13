@@ -17,6 +17,8 @@ de una **acción que da la fase lunar**. Construida sobre `@gladysassistant/inte
 **Sin configuración, totalmente local**: todo se calcula a partir de la ubicación de la casa, sin cuenta, sin clave
 y sin acceso a Internet.
 
+![El widget «Fase lunar»: una luna gibosa creciente iluminada al 79 %, la salida y la puesta, y luego la distancia, la trayectoria, la constelación y los próximos eventos lunares — ilustración generada, no una captura de pantalla](docs/assets/widgets.es.png)
+
 Documentación de usuario: [English](docs/en.md) · [Français](docs/fr.md) · [Deutsch](docs/de.md) ·
 [Español](docs/es.md).
 
@@ -223,6 +225,8 @@ Node 22 o posterior. `npm start` necesita un Gladys en marcha (el SDK lee `GLADY
   widget en cada uno;
 - `test/events.test.js` comprueba los instantes de los eventos lunares con PyEphem;
 - `test/release.test.js` cubre el script de release (versión, changelog, subida de versión).
+- `docs/illustrations/render.sh` regenera las ilustraciones del widget de `docs/assets` a partir del código del
+  widget (Chrome headless, estilos del front de Gladys): vuelve a ejecutarlo tras cualquier cambio del widget.
 
 `gladys_version` es `>=5.1.1` (widgets, disparadores y acciones de escena de las integraciones externas). Solo para
 desarrollo, `MOON_DATA_DIR` mueve los archivos de `/data`.

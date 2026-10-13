@@ -23,6 +23,8 @@ Bearbeite ein Dashboard, wähle **Mondphase** unter den Integrations-Widgets und
 
 ## Was das Widget zeigt
 
+![Das Widget „Mondphase“: ein zunehmender Dreiviertelmond, zu 79 % beleuchtet, Mondauf- und -untergang, dann Entfernung, Bahn, Sternbild und die nächsten Mondereignisse — generierte Illustration, kein Screenshot](https://raw.githubusercontent.com/William-De71/gladys-moon-phase/main/docs/assets/widgets.de.png)
+
 - **Die Phase** (Neumond, Zunehmende Sichel, Erstes Viertel, Zunehmender Dreiviertelmond, Vollmond …), den
   **beleuchteten Anteil** und das **Alter** des Mondes (Tage seit dem letzten Neumond).
 - **Die Mondscheibe** (ein NASA-Foto) mit ihrem beleuchteten Teil.
