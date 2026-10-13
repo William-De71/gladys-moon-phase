@@ -26,11 +26,76 @@
         "es": "Listo para usar"
       },
       "description": {
-        "en": "Nothing to configure: everything is computed locally from the location of your house, with no account and no internet access. Add the \"Moon phase\" widget to a dashboard. The house must have a location (Settings → Houses).",
-        "fr": "Rien à configurer : tout est calculé localement à partir de la position de votre maison, sans compte ni accès Internet. Ajoutez le widget « Phase de la lune » à un tableau de bord. La maison doit être localisée (Paramètres → Maisons).",
-        "de": "Nichts zu konfigurieren: alles wird lokal aus dem Standort deines Zuhauses berechnet, ohne Konto und ohne Internetzugang. Füge das Widget „Mondphase“ einem Dashboard hinzu. Das Zuhause muss einen Standort haben (Einstellungen → Zuhause).",
-        "es": "Nada que configurar: todo se calcula localmente a partir de la ubicación de tu casa, sin cuenta y sin acceso a Internet. Añade el widget «Fase lunar» a un panel. La casa debe tener una ubicación (Ajustes → Casas)."
+        "en": "Nothing to configure: everything is computed locally from the location of your house, with no account and no internet access. Add the \"Moon phase\" widget to a dashboard. The house must have a location (Settings → Houses). The scenes get a trigger on the lunar events and an action giving the phase of the moon.",
+        "fr": "Rien à configurer : tout est calculé localement à partir de la position de votre maison, sans compte ni accès Internet. Ajoutez le widget « Phase de la lune » à un tableau de bord. La maison doit être localisée (Paramètres → Maisons). Les scènes disposent d’un déclencheur sur les événements lunaires et d’une action donnant la phase de la lune.",
+        "de": "Nichts zu konfigurieren: alles wird lokal aus dem Standort deines Zuhauses berechnet, ohne Konto und ohne Internetzugang. Füge das Widget „Mondphase“ einem Dashboard hinzu. Das Zuhause muss einen Standort haben (Einstellungen → Zuhause). Die Szenen erhalten einen Auslöser für die Mondereignisse und eine Aktion, die die Mondphase liefert.",
+        "es": "Nada que configurar: todo se calcula localmente a partir de la ubicación de tu casa, sin cuenta y sin acceso a Internet. Añade el widget «Fase lunar» a un panel. La casa debe tener una ubicación (Ajustes → Casas). Las escenas disponen de un disparador para los eventos lunares y de una acción que da la fase lunar."
       }
+    },
+    {
+      "key": "language",
+      "type": "select",
+      "label": {
+        "en": "Language of the scene texts",
+        "fr": "Langue des textes de scène",
+        "de": "Sprache der Szenentexte",
+        "es": "Idioma de los textos de escena"
+      },
+      "description": {
+        "en": "Event names and summaries of the scenes. Automatic: the language of your dashboard, once the widget has been displayed.",
+        "fr": "Noms des événements et résumés des scènes. Automatique : la langue de votre tableau de bord, dès que le widget a été affiché.",
+        "de": "Ereignisnamen und Zusammenfassungen der Szenen. Automatisch: die Sprache deines Dashboards, sobald das Widget angezeigt wurde.",
+        "es": "Nombres de los eventos y resúmenes de las escenas. Automático: el idioma de tu panel, en cuanto se haya mostrado el widget."
+      },
+      "options": [
+        {
+          "value": "auto",
+          "label": {
+            "en": "Automatic",
+            "fr": "Automatique",
+            "de": "Automatisch",
+            "es": "Automático"
+          }
+        },
+        {
+          "value": "en",
+          "label": {
+            "en": "English",
+            "fr": "English",
+            "de": "English",
+            "es": "English"
+          }
+        },
+        {
+          "value": "fr",
+          "label": {
+            "en": "Français",
+            "fr": "Français",
+            "de": "Français",
+            "es": "Français"
+          }
+        },
+        {
+          "value": "de",
+          "label": {
+            "en": "Deutsch",
+            "fr": "Deutsch",
+            "de": "Deutsch",
+            "es": "Deutsch"
+          }
+        },
+        {
+          "value": "es",
+          "label": {
+            "en": "Español",
+            "fr": "Español",
+            "de": "Español",
+            "es": "Español"
+          }
+        }
+      ],
+      "default": "auto",
+      "required": false
     }
   ],
   "widgets": [
@@ -106,6 +171,356 @@
             "es": "Calcula la iluminación, la distancia, la edad y los próximos eventos a medianoche, como hacen los calendarios lunares, en lugar de a la hora actual. La salida y la puesta de la luna no cambian."
           },
           "default": false
+        }
+      ]
+    }
+  ],
+  "scene_triggers": [
+    {
+      "key": "lunar_event",
+      "label": {
+        "en": "Moon: lunar event",
+        "fr": "Lune : événement lunaire",
+        "de": "Mond: Mondereignis",
+        "es": "Luna: evento lunar"
+      },
+      "description": {
+        "en": "New moon, first quarter, full moon, last quarter, perigee, apogee or lunar eclipse: fired at the minute it happens.",
+        "fr": "Nouvelle lune, premier quartier, pleine lune, dernier quartier, périgée, apogée ou éclipse de lune : déclenché à la minute où il a lieu.",
+        "de": "Neumond, erstes Viertel, Vollmond, letztes Viertel, Perigäum, Apogäum oder Mondfinsternis: ausgelöst in der Minute, in der es eintritt.",
+        "es": "Luna nueva, cuarto creciente, luna llena, cuarto menguante, perigeo, apogeo o eclipse lunar: se dispara en el minuto en que ocurre."
+      },
+      "fields": [
+        {
+          "key": "event",
+          "type": "multi_select",
+          "label": {
+            "en": "Event",
+            "fr": "Événement",
+            "de": "Ereignis",
+            "es": "Evento"
+          },
+          "description": {
+            "en": "Leave empty for any event.",
+            "fr": "Laisser vide pour tous les événements.",
+            "de": "Leer lassen für jedes Ereignis.",
+            "es": "Déjalo vacío para cualquier evento."
+          },
+          "options": [
+            {
+              "value": "new_moon",
+              "label": {
+                "en": "New moon",
+                "fr": "Nouvelle lune",
+                "de": "Neumond",
+                "es": "Luna nueva"
+              }
+            },
+            {
+              "value": "first_quarter",
+              "label": {
+                "en": "First quarter",
+                "fr": "Premier quartier",
+                "de": "Erstes Viertel",
+                "es": "Cuarto creciente"
+              }
+            },
+            {
+              "value": "full_moon",
+              "label": {
+                "en": "Full moon",
+                "fr": "Pleine lune",
+                "de": "Vollmond",
+                "es": "Luna llena"
+              }
+            },
+            {
+              "value": "last_quarter",
+              "label": {
+                "en": "Last quarter",
+                "fr": "Dernier quartier",
+                "de": "Letztes Viertel",
+                "es": "Cuarto menguante"
+              }
+            },
+            {
+              "value": "perigee",
+              "label": {
+                "en": "Perigee (closest to the Earth)",
+                "fr": "Périgée (au plus près de la Terre)",
+                "de": "Perigäum (erdnächster Punkt)",
+                "es": "Perigeo (lo más cerca de la Tierra)"
+              }
+            },
+            {
+              "value": "apogee",
+              "label": {
+                "en": "Apogee (farthest from the Earth)",
+                "fr": "Apogée (au plus loin de la Terre)",
+                "de": "Apogäum (erdfernster Punkt)",
+                "es": "Apogeo (lo más lejos de la Tierra)"
+              }
+            },
+            {
+              "value": "lunar_eclipse",
+              "label": {
+                "en": "Lunar eclipse",
+                "fr": "Éclipse de lune",
+                "de": "Mondfinsternis",
+                "es": "Eclipse lunar"
+              }
+            }
+          ],
+          "required": false
+        }
+      ],
+      "variables": [
+        {
+          "key": "event",
+          "type": "string",
+          "label": {
+            "en": "Event (new_moon, full_moon, perigee…)",
+            "fr": "Événement (new_moon, full_moon, perigee…)",
+            "de": "Ereignis (new_moon, full_moon, perigee …)",
+            "es": "Evento (new_moon, full_moon, perigee…)"
+          }
+        },
+        {
+          "key": "event_name",
+          "type": "string",
+          "label": {
+            "en": "Event name",
+            "fr": "Nom de l'événement",
+            "de": "Name des Ereignisses",
+            "es": "Nombre del evento"
+          }
+        },
+        {
+          "key": "date",
+          "type": "string",
+          "label": {
+            "en": "Date (YYYY-MM-DD)",
+            "fr": "Date (AAAA-MM-JJ)",
+            "de": "Datum (JJJJ-MM-TT)",
+            "es": "Fecha (AAAA-MM-DD)"
+          }
+        },
+        {
+          "key": "time",
+          "type": "string",
+          "label": {
+            "en": "Time (HH:MM)",
+            "fr": "Heure (HH:MM)",
+            "de": "Uhrzeit (HH:MM)",
+            "es": "Hora (HH:MM)"
+          }
+        },
+        {
+          "key": "illumination",
+          "type": "number",
+          "label": {
+            "en": "Illumination (%)",
+            "fr": "Illumination (%)",
+            "de": "Beleuchtung (%)",
+            "es": "Iluminación (%)"
+          }
+        },
+        {
+          "key": "distance_km",
+          "type": "number",
+          "label": {
+            "en": "Earth-Moon distance (km)",
+            "fr": "Distance Terre-Lune (km)",
+            "de": "Entfernung Erde-Mond (km)",
+            "es": "Distancia Tierra-Luna (km)"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, der direkt in eine Nachricht passt.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
+        }
+      ]
+    }
+  ],
+  "scene_actions": [
+    {
+      "key": "get_moon_phase",
+      "label": {
+        "en": "Moon: moon phase",
+        "fr": "Lune : phase de la lune",
+        "de": "Mond: Mondphase",
+        "es": "Luna: fase lunar"
+      },
+      "description": {
+        "en": "The phase of the moon now, its illumination, moonrise and moonset, the next full and new moon, and a sentence for a message.",
+        "fr": "La phase de la lune maintenant, son illumination, son lever et son coucher, les prochaines pleine et nouvelle lunes, et une phrase pour un message.",
+        "de": "Die aktuelle Mondphase, die Beleuchtung, Mondauf- und -untergang, der nächste Voll- und Neumond und ein Satz für eine Nachricht.",
+        "es": "La fase de la luna ahora, su iluminación, salida y puesta, la próxima luna llena y nueva, y una frase para un mensaje."
+      },
+      "timeout_seconds": 10,
+      "fields": [
+        {
+          "key": "house",
+          "type": "string",
+          "label": {
+            "en": "House",
+            "fr": "Maison",
+            "de": "Zuhause",
+            "es": "Casa"
+          },
+          "description": {
+            "en": "Name of the house whose location is used. Leave empty for the first house with a location.",
+            "fr": "Nom de la maison dont la position est utilisée. Laisser vide pour la première maison localisée.",
+            "de": "Name des Zuhauses, dessen Standort verwendet wird. Leer lassen für das erste Zuhause mit Standort.",
+            "es": "Nombre de la casa cuya ubicación se usa. Déjalo vacío para la primera casa con ubicación."
+          },
+          "placeholder": {
+            "en": "First house with a location",
+            "fr": "Première maison localisée",
+            "de": "Erstes Zuhause mit Standort",
+            "es": "Primera casa con ubicación"
+          },
+          "required": false
+        }
+      ],
+      "outputs": [
+        {
+          "key": "phase_name",
+          "type": "string",
+          "label": {
+            "en": "Phase",
+            "fr": "Phase",
+            "de": "Phase",
+            "es": "Fase"
+          }
+        },
+        {
+          "key": "phase",
+          "type": "number",
+          "label": {
+            "en": "Phase (0 new moon, 0.5 full moon)",
+            "fr": "Phase (0 nouvelle lune, 0,5 pleine lune)",
+            "de": "Phase (0 Neumond, 0,5 Vollmond)",
+            "es": "Fase (0 luna nueva, 0,5 luna llena)"
+          }
+        },
+        {
+          "key": "illumination",
+          "type": "number",
+          "label": {
+            "en": "Illumination (%)",
+            "fr": "Illumination (%)",
+            "de": "Beleuchtung (%)",
+            "es": "Iluminación (%)"
+          }
+        },
+        {
+          "key": "age_days",
+          "type": "number",
+          "label": {
+            "en": "Age (days)",
+            "fr": "Âge (jours)",
+            "de": "Alter (Tage)",
+            "es": "Edad (días)"
+          }
+        },
+        {
+          "key": "waxing",
+          "type": "boolean",
+          "label": {
+            "en": "Waxing",
+            "fr": "Croissante",
+            "de": "Zunehmend",
+            "es": "Creciente"
+          }
+        },
+        {
+          "key": "moonrise",
+          "type": "string",
+          "label": {
+            "en": "Moonrise (HH:MM)",
+            "fr": "Lever (HH:MM)",
+            "de": "Mondaufgang (HH:MM)",
+            "es": "Salida (HH:MM)"
+          }
+        },
+        {
+          "key": "moonset",
+          "type": "string",
+          "label": {
+            "en": "Moonset (HH:MM)",
+            "fr": "Coucher (HH:MM)",
+            "de": "Monduntergang (HH:MM)",
+            "es": "Puesta (HH:MM)"
+          }
+        },
+        {
+          "key": "next_full_moon",
+          "type": "string",
+          "label": {
+            "en": "Next full moon (YYYY-MM-DD HH:MM)",
+            "fr": "Prochaine pleine lune (AAAA-MM-JJ HH:MM)",
+            "de": "Nächster Vollmond (JJJJ-MM-TT HH:MM)",
+            "es": "Próxima luna llena (AAAA-MM-DD HH:MM)"
+          }
+        },
+        {
+          "key": "days_until_full_moon",
+          "type": "number",
+          "label": {
+            "en": "Days until the full moon",
+            "fr": "Jours avant la pleine lune",
+            "de": "Tage bis zum Vollmond",
+            "es": "Días hasta la luna llena"
+          }
+        },
+        {
+          "key": "next_new_moon",
+          "type": "string",
+          "label": {
+            "en": "Next new moon (YYYY-MM-DD HH:MM)",
+            "fr": "Prochaine nouvelle lune (AAAA-MM-JJ HH:MM)",
+            "de": "Nächster Neumond (JJJJ-MM-TT HH:MM)",
+            "es": "Próxima luna nueva (AAAA-MM-DD HH:MM)"
+          }
+        },
+        {
+          "key": "days_until_new_moon",
+          "type": "number",
+          "label": {
+            "en": "Days until the new moon",
+            "fr": "Jours avant la nouvelle lune",
+            "de": "Tage bis zum Neumond",
+            "es": "Días hasta la luna nueva"
+          }
+        },
+        {
+          "key": "summary",
+          "type": "string",
+          "label": {
+            "en": "Summary",
+            "fr": "Résumé",
+            "de": "Zusammenfassung",
+            "es": "Resumen"
+          },
+          "description": {
+            "en": "A sentence ready to put in a message.",
+            "fr": "Une phrase prête à mettre dans un message.",
+            "de": "Ein Satz, der direkt in eine Nachricht passt.",
+            "es": "Una frase lista para poner en un mensaje."
+          }
         }
       ]
     }

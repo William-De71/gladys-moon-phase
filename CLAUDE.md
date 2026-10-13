@@ -20,7 +20,7 @@ no key, no account.
 ```bash
 npm install
 npm test                                  # node --test, the built-in runner
-node --test test/widgets.test.js          # one file
+node --test test/widget.test.js           # one file
 npm run lint                              # ESLint
 npm run format:check                      # Prettier, as the CI runs it
 npm run format                            # Prettier, fix in place
@@ -37,6 +37,12 @@ src/moon-image.js       the moon disk with its lit fraction (PNG, NASA photo)
 src/houses.js           the house whose coordinates are used
 src/time.js             the timezone of Gladys, local days and times
 src/widget.js           the dashboard widget content and its image keys
+src/ephemeris.js        the instants of the lunar events (Meeus, to the minute)
+src/events.js           the lunar events and their scene trigger payloads
+src/scheduler.js        fires each lunar event once, at its minute
+src/scene-actions.js    the `get_moon_phase` scene action outputs
+src/config.js           the language of the scene texts
+src/store.js            JSON files under /data (lunar events already fired)
 src/i18n.js             runtime texts, en / fr / de / es
 assets/moon.png         the NASA photo of the moon (credits in assets/CREDITS.md)
 gladys-assistant-integration.json   manifest
@@ -69,8 +75,13 @@ docs/illustrations/render.sh        regenerates the widget illustrations (docs/a
   `description` holds 10 to 100 characters per language. A field older cores
   do not know needs a higher `gladys_version` minimum (see `src/constants.js`
   of the integration-store).
-- **Moon computation.** Keep the results identical to the core widget: do not
-  bump `suncalc` without a parity run (see the README).
+- **Moon computation.** The widget keeps the results of the core widget
+  (moon.js, SunCalc): do not bump `suncalc` without a parity run (see the
+  README). The scene triggers need the real instants: they come from
+  ephemeris.js, checked against PyEphem in `test/events.test.js`.
+- **Scenes.** Never fire a scene trigger as a consequence of a scene action.
+  An event is fired once (kept in `/data/fired.json`), and dropped when missed
+  by more than 10 minutes.
 - **Widget illustrations.** `docs/assets/widgets.<lang>.png` are generated
   from the widget code by `docs/illustrations/render.sh`: run it again after
   any change to a widget content, and keep them labelled as illustrations.

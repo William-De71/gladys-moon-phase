@@ -99,6 +99,30 @@ const TEXTS = {
     de: 'Kein Zuhause namens „{name}“. Zuhause in Gladys: {names}.',
     es: 'Ninguna casa se llama «{name}». Casas de Gladys: {names}.',
   },
+  firstQuarter: {
+    en: 'First quarter',
+    fr: 'Premier quartier',
+    de: 'Erstes Viertel',
+    es: 'Cuarto creciente',
+  },
+  lastQuarter: {
+    en: 'Last quarter',
+    fr: 'Dernier quartier',
+    de: 'Letztes Viertel',
+    es: 'Cuarto menguante',
+  },
+  summaryEvent: {
+    en: '{event} at {time}: the moon is {percent} % illuminated, {distance} km from the Earth.',
+    fr: '{event} à {time} : la lune est éclairée à {percent} %, à {distance} km de la Terre.',
+    de: '{event} um {time}: Der Mond ist zu {percent} % beleuchtet, {distance} km von der Erde entfernt.',
+    es: '{event} a las {time}: la luna está iluminada al {percent} %, a {distance} km de la Tierra.',
+  },
+  summaryPhase: {
+    en: '{phase}, {percent} % illuminated. Next full moon: {full}; next new moon: {new}.',
+    fr: '{phase}, éclairée à {percent} %. Prochaine pleine lune : {full} ; prochaine nouvelle lune : {new}.',
+    de: '{phase}, zu {percent} % beleuchtet. Nächster Vollmond: {full}; nächster Neumond: {new}.',
+    es: '{phase}, iluminada al {percent} %. Próxima luna llena: {full}; próxima luna nueva: {new}.',
+  },
 };
 
 const PHASES = {

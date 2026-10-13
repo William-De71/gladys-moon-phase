@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import { WIDGET_KEY } from '../src/widget.js';
+import { TRIGGER_KEY } from '../src/events.js';
+import { SCENE_ACTION_KEY } from '../src/scene-actions.js';
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
 const manifest = read('../gladys-assistant-integration.json');
@@ -42,4 +44,17 @@ test('keeps the descriptions within the bounds of the core', () => {
   Object.values(manifest.description).forEach((text) =>
     assert.ok(text.length >= 10 && text.length <= 100, text),
   );
+});
+
+test('declares exactly the scene trigger and the scene action the code handles', () => {
+  assert.deepEqual(
+    manifest.scene_triggers.map((entry) => entry.key),
+    [TRIGGER_KEY],
+  );
+  assert.deepEqual(
+    manifest.scene_actions.map((entry) => entry.key),
+    [SCENE_ACTION_KEY],
+  );
+  // Scenes need Gladys 5.1.0: the minimum does not move.
+  assert.equal(manifest.gladys_version, '>=5.1.1');
 });
