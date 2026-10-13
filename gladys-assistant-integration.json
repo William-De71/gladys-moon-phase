@@ -5,7 +5,8 @@
   "description": {
     "en": "Moon phase widget: illumination, moonrise and moonset, upcoming lunar events.",
     "fr": "Widget phase de la lune : illumination, lever et coucher, prochains événements lunaires.",
-    "de": "Mondphasen-Widget: Beleuchtung, Mondauf- und -untergang, nächste Mondereignisse."
+    "de": "Mondphasen-Widget: Beleuchtung, Mondauf- und -untergang, nächste Mondereignisse.",
+    "es": "Widget de fase lunar: iluminación, salida y puesta, próximos eventos lunares."
   },
   "version": "1.0.0",
   "docker_image": "ghcr.io/william-de71/gladys-moon-phase:1.0.0",
@@ -21,12 +22,14 @@
       "label": {
         "en": "Ready to use",
         "fr": "Prêt à l'emploi",
-        "de": "Sofort einsatzbereit"
+        "de": "Sofort einsatzbereit",
+        "es": "Listo para usar"
       },
       "description": {
         "en": "Nothing to configure: everything is computed locally from the location of your house, with no account and no internet access. Add the \"Moon phase\" widget to a dashboard. The house must have a location (Settings → Houses).",
         "fr": "Rien à configurer : tout est calculé localement à partir de la position de votre maison, sans compte ni accès Internet. Ajoutez le widget « Phase de la lune » à un tableau de bord. La maison doit être localisée (Paramètres → Maisons).",
-        "de": "Nichts zu konfigurieren: alles wird lokal aus dem Standort deines Zuhauses berechnet, ohne Konto und ohne Internetzugang. Füge das Widget „Mondphase“ einem Dashboard hinzu. Das Zuhause muss einen Standort haben (Einstellungen → Zuhause)."
+        "de": "Nichts zu konfigurieren: alles wird lokal aus dem Standort deines Zuhauses berechnet, ohne Konto und ohne Internetzugang. Füge das Widget „Mondphase“ einem Dashboard hinzu. Das Zuhause muss einen Standort haben (Einstellungen → Zuhause).",
+        "es": "Nada que configurar: todo se calcula localmente a partir de la ubicación de tu casa, sin cuenta y sin acceso a Internet. Añade el widget «Fase lunar» a un panel. La casa debe tener una ubicación (Ajustes → Casas)."
       }
     }
   ],
@@ -36,12 +39,14 @@
       "label": {
         "en": "Moon phase",
         "fr": "Phase de la lune",
-        "de": "Mondphase"
+        "de": "Mondphase",
+        "es": "Fase lunar"
       },
       "description": {
         "en": "Moon phase, illumination, rise and set, upcoming phases.",
         "fr": "Phase lunaire, illumination, lever et coucher, prochaines phases.",
-        "de": "Mondphase, Beleuchtung, Auf- und Untergang, nächste Phasen."
+        "de": "Mondphase, Beleuchtung, Auf- und Untergang, nächste Phasen.",
+        "es": "Fase lunar, iluminación, salida y puesta, próximas fases."
       },
       "icon": "moon",
       "settings": [
@@ -52,17 +57,20 @@
           "label": {
             "en": "House",
             "fr": "Maison",
-            "de": "Zuhause"
+            "de": "Zuhause",
+            "es": "Casa"
           },
           "description": {
             "en": "Name of the house whose latitude and longitude are used to compute the position of the moon. Leave empty for the first house with a location.",
             "fr": "Nom de la maison dont la latitude et la longitude servent à calculer la position de la lune. Laisser vide pour la première maison localisée.",
-            "de": "Name des Zuhauses, dessen Breiten- und Längengrad zur Berechnung der Mondposition dienen. Leer lassen für das erste Zuhause mit Standort."
+            "de": "Name des Zuhauses, dessen Breiten- und Längengrad zur Berechnung der Mondposition dienen. Leer lassen für das erste Zuhause mit Standort.",
+            "es": "Nombre de la casa cuya latitud y longitud sirven para calcular la posición de la luna. Déjalo vacío para la primera casa con ubicación."
           },
           "placeholder": {
             "en": "First house with a location",
             "fr": "Première maison localisée",
-            "de": "Erstes Zuhause mit Standort"
+            "de": "Erstes Zuhause mit Standort",
+            "es": "Primera casa con ubicación"
           }
         },
         {
@@ -71,12 +79,14 @@
           "label": {
             "en": "Display details",
             "fr": "Afficher les détails",
-            "de": "Details anzeigen"
+            "de": "Details anzeigen",
+            "es": "Mostrar los detalles"
           },
           "description": {
             "en": "Distance, trajectory, constellation and upcoming events under the moon. Uncheck to only display the moon, its phase, moonrise and moonset.",
             "fr": "Distance, trajectoire, constellation et prochains événements sous la lune. Décochez pour n'afficher que la lune, sa phase, son lever et son coucher.",
-            "de": "Entfernung, Bahn, Sternbild und nächste Ereignisse unter dem Mond. Deaktivieren, um nur den Mond, seine Phase und Auf- und Untergang anzuzeigen."
+            "de": "Entfernung, Bahn, Sternbild und nächste Ereignisse unter dem Mond. Deaktivieren, um nur den Mond, seine Phase und Auf- und Untergang anzuzeigen.",
+            "es": "Distancia, trayectoria, constelación y próximos eventos bajo la luna. Desmárcalo para mostrar solo la luna, su fase, su salida y su puesta."
           },
           "default": true
         },
@@ -86,12 +96,14 @@
           "label": {
             "en": "Compute the values at midnight",
             "fr": "Calculer les valeurs à minuit",
-            "de": "Werte um Mitternacht berechnen"
+            "de": "Werte um Mitternacht berechnen",
+            "es": "Calcular los valores a medianoche"
           },
           "description": {
             "en": "Computes the illumination, distance, age and upcoming events at midnight, the way lunar calendars do, instead of the current time. Moonrise and moonset are not affected.",
             "fr": "Calcule l'illumination, la distance, l'âge et les prochains événements à minuit, comme le font les calendriers lunaires, au lieu de l'heure actuelle. Le lever et le coucher de la lune ne changent pas.",
-            "de": "Berechnet Beleuchtung, Entfernung, Alter und die nächsten Ereignisse um Mitternacht, so wie es Mondkalender tun, statt zur aktuellen Uhrzeit. Mondauf- und -untergang bleiben unverändert."
+            "de": "Berechnet Beleuchtung, Entfernung, Alter und die nächsten Ereignisse um Mitternacht, so wie es Mondkalender tun, statt zur aktuellen Uhrzeit. Mondauf- und -untergang bleiben unverändert.",
+            "es": "Calcula la iluminación, la distancia, la edad y los próximos eventos a medianoche, como hacen los calendarios lunares, en lugar de a la hora actual. La salida y la puesta de la luna no cambian."
           },
           "default": false
         }

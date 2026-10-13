@@ -164,7 +164,7 @@ describe('moon widget content', () => {
     assert.equal(content.components[3].value, '--:--');
   });
 
-  for (const language of [...LANGUAGES, 'es', undefined]) {
+  for (const language of [...LANGUAGES, 'it', undefined]) {
     test(`stays within the core bounds over a lunation (${language})`, () => {
       for (let day = 0; day < 30; day += 3) {
         const now = new Date(afternoon.getTime() + day * 24 * 60 * 60 * 1000);
@@ -259,8 +259,10 @@ describe('i18n', () => {
 
   test('falls back to English', () => {
     assert.equal(pickLanguage('fr-FR'), 'fr');
-    assert.equal(pickLanguage('es'), 'en');
+    assert.equal(pickLanguage('es-ES'), 'es');
+    assert.equal(pickLanguage('it'), 'en');
     assert.equal(pickLanguage(undefined), 'en');
     assert.equal(translate(TEXTS.inDays, 'de', { count: 3 }), 'In 3 Tagen');
+    assert.equal(translate(TEXTS.inDays, 'es', { count: 3 }), 'En 3 días');
   });
 });
