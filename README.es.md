@@ -5,7 +5,7 @@
 [![Licencia: Apache-2.0](https://img.shields.io/badge/licencia-Apache--2.0-blue.svg)](LICENSE)
 [![Última versión](https://img.shields.io/github/v/release/William-De71/gladys-moon-phase?sort=semver)](https://github.com/William-De71/gladys-moon-phase/releases)
 [![CI](https://img.shields.io/github/actions/workflow/status/William-De71/gladys-moon-phase/release.yml?branch=main&label=CI)](https://github.com/William-De71/gladys-moon-phase/actions/workflows/release.yml)
-[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.1.1-2f6fb5)](https://gladysassistant.com)
+[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.3.0-2f6fb5)](https://gladysassistant.com)
 
 ![Fase lunar para Gladys Assistant](cover.jpg)
 
@@ -228,7 +228,7 @@ Node 22 o posterior. `npm start` necesita un Gladys en marcha (el SDK lee `GLADY
 - `docs/illustrations/render.sh` regenera las ilustraciones del widget de `docs/assets` a partir del código del
   widget (Chrome headless, estilos del front de Gladys): vuelve a ejecutarlo tras cualquier cambio del widget.
 
-`gladys_version` es `>=5.1.1` (widgets, disparadores y acciones de escena de las integraciones externas). Solo para
+`gladys_version` es `>=5.3.0` (widgets, disparadores y acciones de escena de las integraciones externas, palabras clave del catálogo de Gladys 5.3). Solo para
 desarrollo, `MOON_DATA_DIR` mueve los archivos de `/data`.
 
 ## Release y convención de commits

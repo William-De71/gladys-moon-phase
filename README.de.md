@@ -5,7 +5,7 @@
 [![Lizenz: Apache-2.0](https://img.shields.io/badge/Lizenz-Apache--2.0-blue.svg)](LICENSE)
 [![Neueste Version](https://img.shields.io/github/v/release/William-De71/gladys-moon-phase?sort=semver)](https://github.com/William-De71/gladys-moon-phase/releases)
 [![CI](https://img.shields.io/github/actions/workflow/status/William-De71/gladys-moon-phase/release.yml?branch=main&label=CI)](https://github.com/William-De71/gladys-moon-phase/actions/workflows/release.yml)
-[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.1.1-2f6fb5)](https://gladysassistant.com)
+[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.3.0-2f6fb5)](https://gladysassistant.com)
 
 ![Mondphase für Gladys Assistant](cover.jpg)
 
@@ -232,7 +232,7 @@ greifen nie auf das Netz zu. Über die Unit-Tests hinaus:
 - `docs/illustrations/render.sh` erzeugt die Widget-Illustrationen in `docs/assets` aus dem Widget-Code neu
   (Headless-Chrome, Styles des Gladys-Frontends): nach jeder Änderung am Widget erneut ausführen.
 
-`gladys_version` ist `>=5.1.1` (Widgets, Szenen-Auslöser und -Aktionen externer Integrationen). Nur für die
+`gladys_version` ist `>=5.3.0` (Widgets, Szenen-Auslöser und -Aktionen externer Integrationen, Katalog-Suchbegriffe von Gladys 5.3). Nur für die
 Entwicklung verschiebt `MOON_DATA_DIR` die Dateien von `/data`.
 
 ## Release und Commit-Konvention

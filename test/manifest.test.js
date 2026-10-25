@@ -55,6 +55,20 @@ test('declares exactly the scene trigger and the scene action the code handles',
     manifest.scene_actions.map((entry) => entry.key),
     [SCENE_ACTION_KEY],
   );
-  // Scenes need Gladys 5.1.0: the minimum does not move.
-  assert.equal(manifest.gladys_version, '>=5.1.1');
+  // Scenes need Gladys 5.1.0, the catalog `keywords` 5.3.0: the minimum.
+  assert.equal(manifest.gladys_version, '>=5.3.0');
+});
+
+test('catalog search terms and countries, which need Gladys 5.3.0', () => {
+  assert.equal(manifest.gladys_version, '>=5.3.0');
+  assert.ok(Array.isArray(manifest.keywords));
+  assert.ok(manifest.keywords.length >= 1 && manifest.keywords.length <= 10);
+  const terms = manifest.keywords.map((keyword) => keyword.trim().toLowerCase());
+  for (const [index, term] of terms.entries()) {
+    assert.ok(term.length >= 2 && manifest.keywords[index].length <= 30, term);
+  }
+  assert.equal(new Set(terms).size, terms.length, 'unique once trimmed and lowercased');
+  assert.ok(!terms.includes(manifest.name.toLowerCase()), 'the name is already searched');
+  // Usable anywhere: no country filter in the catalog.
+  assert.equal(manifest.countries, undefined);
 });

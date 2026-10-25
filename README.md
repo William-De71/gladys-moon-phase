@@ -5,7 +5,7 @@
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Latest release](https://img.shields.io/github/v/release/William-De71/gladys-moon-phase?sort=semver)](https://github.com/William-De71/gladys-moon-phase/releases)
 [![CI](https://img.shields.io/github/actions/workflow/status/William-De71/gladys-moon-phase/release.yml?branch=main&label=CI)](https://github.com/William-De71/gladys-moon-phase/actions/workflows/release.yml)
-[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.1.1-2f6fb5)](https://gladysassistant.com)
+[![Gladys](https://img.shields.io/badge/Gladys-%E2%89%A5%205.3.0-2f6fb5)](https://gladysassistant.com)
 
 ![Moon phase for Gladys Assistant](cover.jpg)
 
@@ -222,7 +222,7 @@ touch the network. Beyond the unit tests:
 - `docs/illustrations/render.sh` regenerates the widget illustrations of `docs/assets` from the widget code
   (headless Chrome, the Gladys front styles): run it after any change to the widget.
 
-`gladys_version` is `>=5.1.1` (widgets, scene triggers and actions of external integrations). For development only,
+`gladys_version` is `>=5.3.0` (widgets, scene triggers and actions of external integrations, catalog keywords of Gladys 5.3). For development only,
 `MOON_DATA_DIR` moves the files of `/data`.
 
 ## Release and commit convention
