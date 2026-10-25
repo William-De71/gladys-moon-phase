@@ -5,6 +5,12 @@ follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and versions
 follow [Semantic Versioning](https://semver.org/). This file is generated at
 each release from the Conventional Commits: do not edit it by hand.
 
+## [1.2.0] - 2026-10-25
+
+### Added
+
+- require Gladys 5.3 and declare catalog keywords ([6d86e8b](https://github.com/William-De71/gladys-moon-phase/commit/6d86e8b36c61d7cec06e3edca356ebcb02009f8f))
+
 ## [1.1.1] - 2026-10-24
 
 ### Security
@@ -28,5 +34,6 @@ each release from the Conventional Commits: do not edit it by hand.
 
 * moon phase dashboard widget ([b2b3829](https://github.com/William-De71/gladys-moon-phase/commit/b2b38291b837c3ccb90068ea93926e0c1ea52e26)), references [GladysAssistant/Gladys#2990](https://github.com/GladysAssistant/Gladys/issues/2990)
 
+[1.2.0]: https://github.com/William-De71/gladys-moon-phase/compare/v1.1.1...v1.2.0
 [1.1.1]: https://github.com/William-De71/gladys-moon-phase/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/William-De71/gladys-moon-phase/compare/v1.0.0...v1.1.0
