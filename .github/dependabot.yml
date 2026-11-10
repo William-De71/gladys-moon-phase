@@ -17,6 +17,12 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: development
+    ignore:
+      # suncalc 2 is a rewrite (other series, degrees, north-based azimuth):
+      # its values differ from the core widget this integration mirrors
+      # (src/moon.js). Moving to it is a deliberate port, not an update.
+      - dependency-name: suncalc
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /
